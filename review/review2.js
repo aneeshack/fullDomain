@@ -160,30 +160,38 @@
 // remove(arr)
 
 
-let word ='aneesha'
+// let word ='aneesha'
 
-let map = new Map()
-for(let i=0;i<word.length;i++){
-    if(map.has(word[i])){
-        map.set(word[i],map.get(word[i])+1)
-    }else{
-        map.set(word[i],1)
-    }
-} 
-console.log(map)
+// let map = new Map()
+// for(let i=0;i<word.length;i++){
+//     if(map.has(word[i])){
+//         map.set(word[i],map.get(word[i])+1)
+//     }else{
+//         map.set(word[i],1)
+//     }
+// } 
+// console.log(map)
+// for(let [key, value] of map){
+
+//     if(value===2){
+//         console.log(key)
+//         continue;
+//     }
+// }
+
 
 // let name='rahul ranjan'
 
 
 // 1.callback hell to promise chain
 // 2.30 employee is there,each 10 employee has one manager, second highest employee
-// count the employee has duplicate email id
-// 3.lazyloading
-// 4.reverse using stack
-// find the first unique value in String
+// count the employee has duplicate email id*
+// 3.lazyloading*
+// 4.reverse using stack*
+// find the first unique value in String*
 // remove duplicate using recursion
-// height of binary tree
-// reverse binary tree
-// how data store in useref
+// height of binary tree *
+// reverse binary tree*
+// how data store in useref*
 // Write a mongodb query to find the 2nd heightest salary of employee in each manager?
-// custom hook
+// custom hook*

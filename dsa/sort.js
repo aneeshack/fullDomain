@@ -345,8 +345,8 @@
 
 // console.log(insertionSort(arr))
 
-// ===================quickSort ==================================
-// let arr =[-2,4,5,-5,9,8]
+// ===================quickSort  o(n2)==================================
+// let arr =[4,2,3,5,6,10]
 // function quickSort(arr){
 //     if(arr.length<=1){
 //         return arr
@@ -576,3 +576,11 @@
 // queue.push(6)
 // queue.pop()
 
+// let arr =[5,6,7,3]
+// function sum(arr){
+//     if(arr.length===1)return arr[0]||0
+//     let sums = arr.shift()
+//     return sums+sum(arr)
+
+// }
+// console(sum(arr))

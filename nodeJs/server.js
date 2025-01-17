@@ -1,6 +1,3 @@
-
-
-
 // =============create a server using http==================
 // const http = require('http');
 
@@ -91,36 +88,37 @@
 
 
 // ===============value passed in params and take it for calculation and passed as query==================
-const e = require('express')
-const express = require('express')
-const app = express()
-// http://localhost:3000/user/4456
-app.get('/user/:number',(req,res)=>{
-    const value = parseInt(req.params.number);
-    console.log(value)
-    if(value %2===0){
-        res.send(`it is successful with number ${value}`)
-    }else{
-        res.send(`it is a failure`)
-    }
+// const e = require('express')
+// const express = require('express')
+// const app = express()
+// // http://localhost:3000/user/4456
+// app.get('/user/:number/:value',(req,res)=>{
+//     const value = parseInt(req.params.number);
+//     console.log(value,req.params.value)
+//     if(value %2===0){
+//         res.send(`it is successful with number ${value}`)
+//     }else{
+//         res.send(`it is a odd number`)
+//     }
     
-})
-// http://localhost:3000/number?name=anee&key=something
-app.get('/number',(req,res)=>{
-    const name = req.query
-    const key = req. query.key
-    console.log(key)
-    console.log(name)
-    res.send(`value is get from the query ${JSON.stringify(name)}`)
-})
+// })
+// // http://localhost:3000/number?name=anee&key=something
+// app.get('/number',(req,res)=>{
+//     const name = req.query
+//     const key = req. query.key
+//     console.log(key)
+//     console.log(name)
+//     res.send(`value is get from the query ${JSON.stringify(name)}`)
+// })
 // app.use((req,res,next)=>{
-//     const error =  new Error('something went wrong')
+//     const error =  new Error('error handlling middleware working')
 //     next(error)
 // })
 // app.use((err,req,res,next)=>{
 //     // console.log('error is:',err)
-//     res.status(500).send({messgae:err.message})
+//     res.status(500).send({message:err.message})
 // })
+// app.listen(3000)
 
 // ============child process, child.js is another file===================
 // parent.js
@@ -147,8 +145,37 @@ app.get('/number',(req,res)=>{
 //     res.send('page not found')
 // })
 
-
 // port =3000
 // app.listen(port, ()=>{
 //     console.log(`server is running at http://localhost:${port}`)
 // })
+ 
+// ================event emitter================
+// const EventEmitter = require('events')
+// const emitter = new EventEmitter();
+
+// emitter.on('greet',(value)=>{
+//     console.log(`hello ${value}`)
+// })
+// emitter.emit('greet','aneesha')
+// emitter.emit('greet','reshin')
+
+// ==============cluster modul==================
+// const cluster = require('cluster');
+// const os = require('os')
+// const http = require('http')
+
+// if(cluster.isMaster){
+//     const cpu = os.cpus().length
+//     for(let i=0;i<cpu;i++){
+//         cluster.fork()
+//     }
+//     cluster.on('exit',(Worker)=>{
+//         console.log(`worker ${Worker.process.pid} dies`)
+//     })
+// }else{
+//     http.createServer((req,res)=>{
+//         res.writeHead(200)
+//         res.end('hello world')
+//     }).listen(8000)
+// }

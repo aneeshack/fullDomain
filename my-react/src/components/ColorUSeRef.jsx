@@ -7,7 +7,7 @@ const ColorUSeRef = () => {
     }
   return (
     <div>
-        <input type='text' ref={inputRef} it is colour changing />
+        <input type='text' ref={inputRef} />
        <button onClick={handleClick}>click</button>
     </div>
   )

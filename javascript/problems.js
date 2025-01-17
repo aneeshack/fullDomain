@@ -178,6 +178,28 @@
 //   console.log(data)
 
 // or
+// const data = {
+//   group1: [1, 2, 3],
+//   group2: [4, 5],
+//   group3: [6, 7, 8]
+// };
+
+// function multiplyArrays(obj) {
+//  let map = {}
+
+//  for(let key in obj){
+//   let mul =1
+//   for(let val of obj[key]){
+//       mul *= val
+//   }
+//   map[key] = mul
+//  }
+//  return map
+// }
+
+// console.log(multiplyArrays(data));  
+
+// or
 // let arr =[8,6,7,8,0]
 // arr.forEach((num,index)=>{
 //   console.log(num,index)
@@ -242,7 +264,7 @@
 //     clearInterval(intervalId);
 //   }, 5000);
   
-
+// ==================================================
 // console.log('Start');
 // setImmediate(() => {
 //     console.log('This runs immediately after the current event loop phase.');
@@ -252,29 +274,14 @@
 //     console.log('set time out')
 // });
 // console.log('End');
-
-
-// const EventEmitter = require('events');
-
-// // Create a new EventEmitter instance
-// const emitter = new EventEmitter();
-
-// // Register a listener for the 'greet' event
-// emitter.on('greet', (name) => {
-//   console.log(`Hello, ${name}!`);
-// });
-
-// // Emit the 'greet' event
-// emitter.emit('greet', 'aneesha'); // Output: Hello, Alice!
-// emitter.emit('greet', 'vinisha'); // Output: Hello, Alice!
+// =================use strict=========================
 // "use strict"
 // function example() { 
 //     let name='anee'
 //     console.log(name);
-
-
 //   }
 //   example(); // In non-strict mode, this refers to the global object.
+
 // "use strict"  
 // x=10
 // console.log(x)
@@ -737,7 +744,7 @@
 // }
 // console.log(largest)
 
-
+// ===============second largest repeating number-=====================
 // let arr=[1,1,1,2,3,2,5]
 // let map = new Map()
 // for(let i=0;i<arr.length;i++){
@@ -765,3 +772,48 @@
 //     }
 // }
 // console.log(largekey,secondkey)
+
+
+// =======================first unique value in the string aneesha=======================
+// let word ='aneesha'
+
+// let map = new Map()
+// for(let i=0;i<word.length;i++){
+//     if(map.has(word[i])){
+//         map.set(word[i],map.get(word[i])+1)
+//     }else{
+//         map.set(word[i],1)
+//     }
+// } 
+// console.log(map)
+// for(let [key, value] of map){
+//     if(value===1){
+//         console.log(key)
+//         return
+//     }
+// }
+
+// ======================================
+// print apple to a-pp-l-e
+// let str ='applle'
+// let ans=''
+// for(let i=0;i<str.length;i++){
+//     if(str[i]===str[i+1]){
+//         ans+=str[i]
+//     }else{
+//      ans+= str[i]+'-'
+//     }
+// }
+// console.log(ans)
+
+// ======== input apple output should be a-pp-ppp-llll-eeeee=============================
+// let str ='apple'
+// let ans =''
+// for(let i=0;i<str.length;i++){
+//     if(i===str.length-1){
+//          ans += str[i].repeat(i+1)
+//          break;
+//     }
+//     ans += str[i].repeat(i+1)+'-'
+// }
+// console.log(ans)

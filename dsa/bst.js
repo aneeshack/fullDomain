@@ -27,7 +27,7 @@ class BinarySearch{
         }
     
     }
-
+  
     insertValue(root, newNode){
         if(newNode.value<root.value){
             if(root.left === null){
@@ -42,6 +42,17 @@ class BinarySearch{
                 this.insertValue(root.right,newNode)
             }
         }
+    }
+
+    reverse(node = this.root){
+        if(!node){
+            return
+        }
+        let temp = node.left
+        node.left = node.right
+        node.right = temp
+        this.reverse(node.left)
+        this.reverse(node.right)
     }
 
     preOrder(root){
@@ -131,6 +142,18 @@ class BinarySearch{
         return Math.max(left,right)+1
     }
     }
+    isBalanced(node = this.root){
+        if(!node){
+            return true
+        }
+        let left = this.heightOfTree(node.left)
+        let right = this.heightOfTree(node.right)
+        if(Math.abs(left-right)>1){
+            return false
+        }
+        return this.isBalanced(node.left)&&this.isBalanced(node.right)
+    }
+
     isSame(node1,node2){
         if(node1 ===null && node2===null){
      
@@ -145,6 +168,13 @@ class BinarySearch{
         }
         return this.isSame(node1.left,node2.left)&&this.isSame(node1.right,node2.right)
     }
+    maximum(node = this.root){
+        if(!node.right){
+            return node.value
+        }else{
+            this.maximum(node.right)
+        }
+    }
 }
 
 let search = new BinarySearch()
@@ -153,6 +183,7 @@ search.insert(77)
 search.insert(9)
 search.insert(6)
 search.insert(5)
+console.log(search.maximum())
 // search.preOrder(search.root)
 // search.inOrder(search.root)
 // search.highest()
@@ -166,6 +197,6 @@ search1.insert(9)
 search1.insert(6)
 search1.insert(5)
 
-console.log(search.isSame(search.root,search1.root))
+// console.log(search.isSame(search.root,search1.root))
 
 

@@ -208,28 +208,28 @@
 //       upsertedIds: {}
 //     }
 
-db.student.aggregate([
-    {
-      $facet: {
-        countStudent: [
-          {
-            $group: {
-              _id: "$degree",
-              count: { $sum: 1 } // Count of students per degree
-            }
-          }
-        ],
-        average: [
-          {
-            $group: {
-              _id: "$degree",
-              average: { $avg: "$srn" } // Ensure 'srn' is numeric
-            }
-          }
-        ]
-      }
-    }
-  ]);
+// db.student.aggregate([
+//     {
+//       $facet: {
+//         countStudent: [
+//           {
+//             $group: {
+//               _id: "$degree",
+//               count: { $sum: 1 } // Count of students per degree
+//             }
+//           }
+//         ],
+//         average: [
+//           {
+//             $group: {
+//               _id: "$degree",
+//               average: { $avg: "$srn" } // Ensure 'srn' is numeric
+//             }
+//           }
+//         ]
+//       }
+//     }
+//   ]);
   // 1.start with letter r
 // student> db.student.find({sname:{$regex:'^r',$options:i}})
 // last letter student> db.student.find({sname:{$regex:'n$',$options:'i'}})
@@ -244,3 +244,47 @@ db.student.aggregate([
 // student> db.createView('newView','student',[{$project:{name:1}}])
 // { ok: 1 }
 // student> db.newView.find()
+
+// =======$out ==============create a new collection named in the out field
+// student> db.student.aggregate({$match:{degree:"BCA"}},{$group:{_id:'$CGPA',totalCGPA:{$sum:"$CGPA"}}},{$out:"aggregateResult"})
+// ======$setUnion===============
+// student> db.student.aggregate({$project:{combinedArray:{$setUnion:[[1,2,3],[5,6,7]]}}})
+// output=>
+//   _id: ObjectId('65f96b101ceb9c47dd8bf202'),
+//   combinedArray: [ 1, 2, 3, 5, 6, 7 ]
+// },
+// {
+//   _id: ObjectId('65f96b101ceb9c47dd8bf203'),
+//   combinedArray: [ 1, 2, 3, 5, 6, 7 ]
+// },
+
+// =====create index and covered query=========
+// student> db.student.createIndex({name:1})
+// name_1
+// student> db.student.find({name:1,_id:0}).explain('executionStats')
+// {
+//   explainVersion: '1',
+//   queryPlanner: {
+//     namespace: 'student.student',
+//     indexFilterSet: false,
+//     parsedQuery: {
+//       '$and': [ { _id: { '$eq': 0 } }, { name: { '$eq': 1 } } ]
+//     },
+//     queryHash: '414A2F4D',
+//     planCacheKey: 'DC2C9F7D',
+//     maxIndexedOrSolutionsReached: false,
+//     maxIndexedAndSolutionsReached: false,
+//     maxScansToExplodeReached: false,
+//     winningPlan: {
+//       stage: 'FETCH',
+
+
+// ==========clustered collection===============
+// student> db.createCollection('logs',{clusteredIndex:{key:{_id:1},unique:true}})
+// { ok: 1 }
+
+// ========================count the student has duplicate degree========================
+// student> db.student.aggregate([{$group:{_id:'$degree',count:{$sum:1}}},{$match:{count:{$gt:1}}},{$count:'duplicate degree'}])
+
+// ==========conditional statement in mongo============================
+// student> db.student.aggregate([{$addFields:{CGPA_Status:{$cond:[{$gt:["$CGPA",20]},'Excellent',{$cond:[{$gte:["CGPA",10]},"Good",'Need Improvement']}]}}}])

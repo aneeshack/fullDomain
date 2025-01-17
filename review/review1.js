@@ -109,10 +109,10 @@
 let arr =[6,5,3,7,9]
 function heapSort(arr){
     let n = arr.length;
-    for(let i= Math.floor((n/2)-1);i>=0;i--){
+    for(let i= Math.floor((n/2));i>=0;i--){
         heapify(arr,n,i)
     }
-    for(let i=n;i>0;i--){
+    for(let i=n-1;i>=0;i--){
         [arr[0],arr[i]]=[arr[i],arr[0]]
            heapify(arr,i,0)
     }

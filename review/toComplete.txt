@@ -1,0 +1,265 @@
+palindrom using stack
+reverse string using stack
+increment button click timer from 1 to 10 and decrement click 10 to 0
+store a name in useRef
+queue using liked list
+LinkedIn list-duplicate
+
+// dsa
+// linkedlist
+// binary tree*
+// hashtable
+// stack *
+// sort using stack*
+// queue*
+// priority queue*
+// circular queue
+// double ended queue
+// binary search tree*
+// 6 sorts
+// graph*
+// trie
+// heap
+// quicksort o(n2)complexity
+
+pranav shankar
+print apple to a-pp-l-e*
+worker thread*
+do the bst is balanced*
+usecallback*
+usememo*
+custom hook*
+palindrom check using recursion
+// react.memo*
+// custom hook*
+// lazy loading*
+sibling communication*
+str='abecefda' return output as bcf, unique vlaues
+
+
+aparna
+generator function 100 1 5's multiple print in reverse order,
+sort a stack using 2 stack
+sort stack using 
+parent to child prop passing
+console.log('1'+1)
+console.log(1++'1')
+console.log('a'+1)
+type coarsion
+find the largest odd number of the array using reduce
+remove large property of the object
+JS:
+illegal shadowing
+purpose of call,apply,bind - clarity
+
+React:
+useLocation
+forwardRef
+
+DS:
+complete graph
+sort a stack - completion
+
+Mongo:
+data modeling
+"Pendings:
+JS:
+pass by value vs pass by reference
+remove last property from object
+
+React:
+one way data binding
+accessing data from uncontrolled element - completion
+advantages of useRef
+forwardRef
+Suspense
+life cycle of functional component
+passing data from child to parent
+
+DS:
+complete graph
+complexity of BFS and DFS
+sum of array using recursion
+height of a tree
+degree of node
+largest element from BST
+merge sort implementation
+
+Node:
+Node concurrency
+router chaining
+dynamic routing
+path params
+disadvantages of cookies
+
+Mongo:
+data modeling
+covered query
+$out
+$setUnion
+
+
+
+
+
+
+
+
+===========jobin george======================
+Pure function
+Function borrowing in JS 
+Rest operator in JS
+Node.js architecture
+Concurrency in Node.js
+SetImmediate
+Process.nextTick
+Buffer
+Design patterns
+fs.readFile code
+Fs.unlink()
+CORS policy
+res.send vs res.end
+Hook concept 
+useMemo dependency list
+Lazy loading
+Error boundary
+useRef
+useEffect hook - handling lifecycle methods 
+useDispatch hook (return type)
+Jwt.verify()
+BSON
+$exists
+$type
+$lookup parameters
+$inc query
+$group with $sum query
+Divide and conquer
+Head in linkedlist 
+Weighted graphs
+Backtracking
+complete binary tree
+find min node in bst
+
+
+
+============  Edwin manual=============
+ Keywords and identifiers
+- Deep copy vs shallow copy
+- Limitations of arrow functions
+- Calculate age
+- Prototype chaining
+- WeakMap
+- Access specifiers
+- Static methods
+- Indexing disadvantages
+- Indexing advantages
+- Analyzing recursive algorithms
+- Hash table
+- Heap
+- Adjacency list vs adjacency matrix
+- React Fiber
+- Portals
+- Error boundaries
+- CSR
+
+
+===============shahabas====================
+what is promise
+http in detail
+OPTIONS
+process vs threads
+fork() vs spawn()
+path params vs query params
+router chaining
+error handling in react
+shadow DOM
+render props
+redux store methods
+disadvantages of recursion
+applications of singly LL
+load factor
+balanced tree
+applications of heap
+
+==================aparna========================
+pass by value vs pass by reference//
+remove last property from object//
+
+React:
+one way data binding//
+accessing data from uncontrolled element - completion//
+advantages of useRef//
+forwardRef//
+Suspense//
+life cycle of functional component//
+passing data from child to parent//
+
+DS:
+complete graph//
+complexity of BFS and DFS//
+sum of array using recursion//
+height of a tree//
+degree of node//
+largest element from BST//
+merge sort implementation//
+
+Node:
+Node concurrency//
+router chaining//
+dynamic routing//
+path params//
+disadvantages of cookies//
+
+Mongo:
+data modeling//
+covered query//
+$out//
+$setUnion//
+
+======================pranav shankar===========================
+-prototype inheritance *
+-some()*
+-flatMap()*
+-cluster module *
+-benefits purpose of higher order component *
+-difference between useeffect and useLayoutEffect *
+-useCallback need practical exposure *
+-purpose of middleware in redux *
+-$fill*
+-$out*
+-$cond *
+-sharding 
+-input apple output should be a-pp-ppp-llll-eeeee*
+-callback hell*
+-difference between spawn and fork *
+-cluster module *
+-create a worker thread *
+-create a custom map function *
+-why time complexity of quick sort in n  square in worst case *
+-find the longest consecutive character from string *
+-find the second longest word in string *
+-purpose/benefits  of HOC*
+-what is purpose of middleware *
+-difference between thunk and saga* 
+-how to decide in which field need to add indexing *
+-$fill*
+-$let*
+Uncontrolled controlled *
+Proxy*
+LinkedIn list-duplicate
+prototypal inheritance*
+-difference between promise and async-await*
+-difference between promise and observables*
+-can we use async without await?*
+-is string mutable?*
+-Asynchronous Iteration*
+-promise.finally*
+-fromEntries*
+-which type of task come under micro task queue?(understand event loop)*
+-Proxy*
+-create an worker thread*
+-difference between fs.readFile and fs.createReadStream*
+-time complexity of binary search*
+-create an array and choose pivot that can be considered as worse case for quicksort*
+-find the second longest word in string without using inbuilt split*
+-write a query too get in which city maximum people are staying

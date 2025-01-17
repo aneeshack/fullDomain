@@ -75,6 +75,16 @@ class Graph{
            }
         }
     }
+    
+    findLeafNodes(){
+        let leafNode =[]
+        for(let vertex in this.adjacencyList){
+            if(this.adjacencyList[vertex].size===1){
+                leafNode.push(vertex)
+            }
+        }
+        console.log(leafNode)
+    }
 }
 
 let graph = new Graph()
